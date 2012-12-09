@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VideoDiez</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<hr />
+<h2 style="color: #888;">Menu de Opciones 2</h2>
+<ol>
+	<li><%= link_to_unless_current "Home", :root%></li>
+	<li><%= link_to_unless_current "Contactos", :nuevo_alias%></li>
+	<li><%= link_to_unless_current "Productos", :controller=>"productos", :action=>"index"%></li>
+	<li><%= link_to_unless_current "Nosotros", :controller=>"nosotros", :action=>"index"%></li>
+</ol>
+
+<%= yield %>
+
+</body>
+</html>
